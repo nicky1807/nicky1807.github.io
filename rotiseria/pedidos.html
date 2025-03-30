@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pedidos</title>
+</head>
+<body>
+     <!--HEADER-->
+     <header>
+        <table>
+            <tr>
+                <!--LOGO-->
+                <th>
+                    <img src="img/index/TMTRosticeria_logo.jpg" width="50px" height="50px">
+                </th>
+                <th>
+                    <h1>TMTRosticeria</h1>
+                </th>
+                <!--LINK-->
+                <th>
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </th>
+                <th>
+                    <a class="nav-link" href="menu.html">Menú</a>
+                </th>
+                <th>
+                    <a class="nav-link" href="nosotros.html">Nosotros</a>
+                </th>
+                <th>
+                    <a class="nav-link" href="promociones.html">Promociones</a>
+                </th>
+                <th>
+                    <a class="nav-link" href="testimonios.html">Testimonios</a>
+                </th>
+                <th>
+                    <a class="nav-link" href="FAQ.html">Preguntas</a>
+                </th>
+                <th>
+                    <a class="nav-link" href="contactos.html">Contactos</a>
+                </th>
+                <th>
+                    <a class="nav-link" href="pedidos.html">Pedidos</a>
+                </th>
+            </tr>
+        </table>
+    </header>
+    <!--CONTENIDO-->
+    <main>
+        <h1>Pedidos</h1>
+        <form action="procesar_pedido.php" method="POST">
+            <label for="producto">Selecciona un producto:</label>
+            <select id="producto" name="producto">
+                <option value="empanadas">empanadas</option>
+                <option value="tartas">tartas y Pascualinas</option>
+                <option value="pollo">pollo al horno</option>
+                <option value="milanesa">Milanesa napolitana</option>
+                <option value="pastas">pastas</option>
+                <option value="guarniciones">guarniciones</option>
+            </select><br><br>
+            
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad" min="1" required><br><br>
+
+            <label for="producto">Selecciona una bebida:</label>
+            <select id="producto" name="producto">
+                <option value="bebidas">gaseosa</option>
+                <option value="jugo">jugo</option>
+                <option value="agua">agua</option>
+                <option value="cerveza">cerveza</option>
+            </select><br><br>
+
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad" min="1" required><br><br>
+
+            <label for="metodo_retiro">Método de retiro:</label>
+            <select id="metodo_retiro" name="metodo_retiro">
+                <option value="local">En local</option>
+                <option value="domicilio">Entrega a domicilio</option>
+            </select><br><br>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required><br><br>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required><br><br>
+
+            <button type="submit">Enviar pedido</button>
+        </form>
+    </main>
+
+    <!--FOOTER-->
+    <footer>
+        <strong>los derechos estzn reservaados.. TMTRosticeria@gmail.com 2025 ( ͡° ͜ʖ ͡°)</strong>
+    </footer>
+    
+</body>
+</html>
