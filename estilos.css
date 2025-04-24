@@ -1,0 +1,308 @@
+/* Fuente general */
+body {
+    margin: 0; /* Elimina el margen predeterminado del navegador */
+    font-family: 'Courier New', monospace; /* Define la fuente principal */
+    background: linear-gradient(to bottom, #000000, #200020); /* Fondo con degradado */
+    color: white; /* Color blanco para el texto */
+}
+
+header {
+    display: flex;
+    justify-content: flex-end; /* Esto alinea el contenido a la derecha */
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #000;
+    z-index: 10;
+    position: relative;
+}
+/* Navegación */
+nav a {
+    margin-left: 20px; /* Espaciado entre enlaces */
+    color: white; /* Color blanco para el texto */
+    text-decoration: none; /* Elimina el subrayado */
+    font-weight: bold; /* Texto en negrita */
+}
+
+nav a:hover {
+    color: #8a49ca; /* Cambia el color al pasar el cursor */
+}
+
+  
+
+/* Menú flotante */
+.menu-flotante {
+    position: fixed; /* Fija el menú en la pantalla */
+    top: 10px; /* Posiciona el menú a 10px desde la parte superior */
+    left: 20px; /* Posiciona el menú a 20px desde la izquierda */
+    z-index: 1000; /* Prioridad alta en el apilamiento */
+}
+
+/* Submenú */
+.submenu {
+    display: none; /* Oculta el submenú por defecto */
+    position: absolute; /* Posiciona el submenú relativo al contenedor */
+    top: 100%; /* Coloca el submenú debajo del botón */
+    background-color: #0a0a0a; /* Fondo oscuro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 8px 16px rgba(210, 69, 253, 0.2); /* Sombra suave */
+    z-index: 1; /* Prioridad en el apilamiento */
+}
+
+.submenu.mostrar {
+    display: block; /* Hace visible el submenú */
+}
+
+.submenu a {
+    color: white; /* Color blanco para el texto */
+    text-decoration: none; /* Elimina el subrayado */
+    padding: 20px 50px; /* Espaciado interno */
+    display: block; /* Cada enlace ocupa toda la línea */
+}
+
+.submenu a:hover {
+    background-color: #723cac; /* Cambia el fondo al pasar el cursor */
+}
+
+/* Secciones generales */
+.seccion {
+    padding: 120px 40px;
+    margin-bottom: 90px;
+    text-align: center;
+}
+
+
+/* Inicio */
+#inicio .contenido {
+    max-width: 500px; /* Ancho máximo del contenido */
+    font-size: 20px; /* Tamaño de fuente */
+    line-height: 1.1; /* Altura de línea */
+}
+.contenido-logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* separa el texto y el logo */
+    padding: 0 40px;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.texto-bienvenida {
+    flex: 1;
+    text-align: left;
+    max-width: 500px;
+}
+
+.logo img {
+    width: 200px; /* aumentamos el tamaño del logo */
+    height: auto;
+}
+/* Sección de habilidades */
+
+/* Contenedor general */
+#perfil {
+    display: flex; /* Usa flexbox para organizar los elementos */
+    justify-content: space-between; /* Espacia los elementos a los extremos */
+    align-items: flex-start; /* Alinea los elementos al inicio verticalmente */
+    gap: 20px; /* Espaciado entre elementos */
+    max-width: 1000px; /* Ancho máximo */
+    margin: 80px auto; /* Margen superior e inferior y centrado horizontal */
+    padding: 40px; /* Espaciado interno */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
+}
+
+/* SOBRE MÍ - columna izquierda */
+.sobre-mi {
+    flex: 2; /* Ocupa más espacio que la columna de skills */
+    background-color: #0b0014; /* Fondo oscuro */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 0 30px #9969c933; /* Sombra suave */
+    color: white; /* Texto blanco */
+    font-size: 16px; /* Tamaño de fuente */
+    line-height: 1.5; /* Altura de línea */
+}
+
+/* SKILLS - columna derecha */
+.skills {
+    flex: 1; /* Ocupa menos espacio que la columna de "Sobre mí" */
+    border: 2px solid #a64dff; /* Borde morado */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 0 20px #a64dff33; /* Sombra suave */
+    background-color: transparent; /* Fondo transparente */
+}
+
+/* Títulos */
+.sobre-mi h2,
+.skills h2 {
+    font-size: 20px; /* Tamaño de fuente */
+    margin-bottom: 15px; /* Margen inferior */
+    color: white; /* Color blanco */
+}
+
+
+/* Iconos de habilidades */
+.skill img {
+    width: 20px; /* Ancho del icono */
+    height: 20px; /* Altura del icono */
+    object-fit: contain; /* Ajusta el contenido del icono */
+}
+
+/* Proyectos */
+.proyectos {
+    display: flex; /* Usa flexbox para organizar los proyectos */
+    justify-content: center; /* Centra los proyectos horizontalmente */
+    gap: 20px; /* Espaciado entre proyectos */
+    margin: 40px auto; /* Margen superior e inferior */
+    flex-wrap: wrap; /* Permite que los proyectos se ajusten en varias líneas */
+    text-align: center; /* Centra el texto */
+}
+
+.pro-titulo {
+    font-size: 28px; /* Tamaño de fuente */
+    margin-bottom: 20px; /* Margen inferior */
+    color: white; /* Color blanco */
+    text-align: center; /* Centra el texto */
+}
+
+.proyecto {
+    background-color: #0f030f; /* Fondo oscuro */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    max-width: 300px; /* Ancho máximo */
+    box-shadow: 0 0 10px #a64dff33; /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+.proyecto:hover {
+    transform: scale(1.03); /* Aumenta el tamaño al pasar el cursor */
+    box-shadow: 0 0 20px #a64dff88; /* Sombra más intensa */
+}
+
+.proyecto img {
+    width: 100%; /* Ancho completo */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* FORMULARIO DE CONTACTO */
+
+/* Título del formulario */
+.form-titulo {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+}
+
+/* Contenedor principal de contacto (formulario + info adicional) */
+.contacto-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+/* Formulario dentro del contenedor */
+.contacto-contenedor form {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Estilos del formulario */
+#contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 0 auto;
+    background-color: #0b0014;
+    padding: 20px;
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px #aa56ff33;
+}
+
+/* Inputs y textarea */
+input,
+textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #511e5e;
+    color: white;
+}
+
+.info-adicional {
+    flex: 1;
+    min-width: 100px;
+    color: #ddd;
+    font-family: 'Courier New', monospace;
+    font-size: 20px; /* más chico */
+    background-color: #1a0b1f; /* leve fondo para contraste */
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #9c39ff33;
+}
+
+.info-adicional h2 {
+    font-size: 22px; /* más pequeño y elegante */
+    margin-bottom: 10px;
+    color: #bb86fc;
+}
+
+.info-adicional p {
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+/* Links dentro de info adicional */
+.info-adicional a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #9f6fff;
+
+}
+
+.info-adicional a:hover {
+    color: #bb86fc;
+}
+
+/* Botón */
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #a64dff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #9229ff;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #bbb;
+}
+
+/* Redes sociales */
+.sociales {
+    margin-bottom: 10px;
+}
+
+.sociales i {
+    margin: 0 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.sociales i:hover {
+    color: #a64dff;
+}
